@@ -2,34 +2,48 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import axios from 'axios';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [autenticado, setAutenticado] = useState(false);
+
+
+
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    axios
+      .post('http://localhost:8080/api/v1/logins/auth', {usuario: '', senha: ''})
+      .then(() => setAutenticado(true))
+      .catch(() => setAutenticado(false))
+  }
+
+  //capturar os valores dos inputs usuario e senha 
+  //enviar os dados
+  //endpoint no java para a rota
+
+  if(autenticado === false) {
+    return (
+      <>
+        <div>
+          <form onSubmit={handleOnSubmit}>
+            <div className="usuario">
+              <label htmlFor="">Usuario</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label htmlFor="">Senha</label>
+              <input type="password" />
+            </div>
+          </form>
+        </div>
+      </>
+    )
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>Seja bem vindo</div>
   )
+  
 }
 
 export default App
