@@ -6,16 +6,20 @@ import axios from 'axios';
 
 function App() {
   const [autenticado, setAutenticado] = useState(false);
+  const [usuario,setUsuario] = useState(null);
+  const [senha,setSenha] = useState(null);
+  const [mensagemErro,setMensagemErro] = useState(null);
 
 
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
     axios
-      .post('http://localhost:8080/api/v1/logins/auth', {usuario: '', senha: ''})
+      .post('http://localhost:8080/api/v1/logins', {userName:usuario , senha })
       .then(() => setAutenticado(true))
-      .catch(() => setAutenticado(false))
+      .catch(() => setMensagemErro(true))
   }
+  
 
   //capturar os valores dos inputs usuario e senha 
   //enviar os dados
@@ -25,15 +29,24 @@ function App() {
     return (
       <>
         <div>
+          {
+            mensagemErro && <p>Usuario ou senha inválidos.Tente novamente! </p>
+          }
           <form onSubmit={handleOnSubmit}>
             <div className="usuario">
               <label htmlFor="">Usuario</label>
-              <input type="text" />
+              <input type="text" onChange={(event) => {setUsuario(event.target.value)} } />
             </div>
             <div>
               <label htmlFor="">Senha</label>
-              <input type="password" />
+              <input type="password" onChange={(event) => {setSenha(event.target.value)}} />
             </div>
+          <div>
+           <button onClick={() => handleOnSubmit()}>Logar </button>
+           <button id="Excluir" onClick={() => setTarefas(tarefas)}>
+        Excluir
+        </button>
+          </div>
           </form>
         </div>
       </>
@@ -41,7 +54,14 @@ function App() {
   }
 
   return (
-    <div>Seja bem vindo</div>
+   
+    <div>
+      <div>Seja bem vindo</div>
+      <button onClick={()=>{
+        setAutenticado(false)
+        setMensagemErro(false)
+        } }> Sair </button> 
+    </div>
   )
   
 }
