@@ -56,7 +56,76 @@ function App() {
   return (
    
     <div>
-      <div>Seja bem vindo</div>
+      <div><img src="Cacos_De_Granito_e_Marmore.jpg"
+                title="Cacos de Granito e Mármore"
+                width="200" height="100"></img>
+        <ul><li>Vendo Cacos de Granito e Mármore</li>
+               <li>20m</li>
+               <li>Praia Grande-SP  08 de set</li>
+        </ul>
+      </div>
+      <div><img src=""
+                title=""
+                width="200" height="200"></img>
+        <ul><li>Pedrisco-Construção e Demolição</li>
+               <li>1000m</li>
+               <li>Valinhos-SP 20 out</li>
+        </ul>
+      </div>
+      <div><img src=""
+                title=""
+                width="200" height="200"></img>
+        <ul><li>Vendo Agregado Leve de E.V.A</li>
+               <li>Agregado de Construção e Demolição</li>
+               <li>2000kg</li>
+               <li>Estância Velha-RS 27 Ago</li>
+            </ul>
+      </div>
+      <div><img src=""
+                title=""
+                width="200" height="200"></img>
+        <ul><li>Vendo Microfibra Poliester</li>
+               <li>Microfibra Poliester-Plástico</li>
+               <li>5000Kg</li>
+               <li>Igreginha-RS 05 Jun</li>
+            </ul>
+      </div>
+      <div><img src="Flake_Azul_e_Verde_Plástico.jpg"
+                title="Plástico Flake Azul e Verde"
+                width="200" height="200"></img>
+        <ul><li>Vendo Plástico Flake Azul e Verde</li>
+               <li>Flake Azul e Verde-Plástico</li>
+               <li>60.000Kg</li>
+               <li>Maracanaú-CE 25 Jun</li>
+            </ul>
+      </div>
+      <div><img src="Fibra_De_Vidro.jpg"
+                title="Fibra de Vidro Desfiada"
+                width="200" height="200"></img>
+        <ul><li>Vendo Fibra de Vidro Desfiada</li>
+               <li>Fibra de Vidro Desfiada- Construção e Demolição</li>
+               <li>500.000Kg</li>
+               <li>Garibaldi-RS</li>
+            </ul>
+      </div>
+      <div><img src="Areia_De_Fundicao.jpg"
+                title="Areia de Fundição"
+                width="200" height="200"></img>
+        <ul><li>Vendo Areia de Fundição</li>
+               <li>Areia de Fundição-Construção e Demolição</li>
+               <li>1260.000Kg</li>
+               <li>Santo Ângelo-RS 23 Jan</li>
+        </ul>
+      </div>
+      <div><img src="Borracha_Silicone_Em_Po.jpg"
+                title="Borracha Silicone em Pó"
+                width="200" height="200"></img>
+        <ul><li>Vendo Borracha Silicone em Pó-Químicos</li>
+            <li>60.000Kg</li>
+            <li>São caetano do Sul -SP 20 Out</li>
+        </ul>
+      </div>
+          
       <button onClick={()=>{
         setAutenticado(false)
         setMensagemErro(false)
