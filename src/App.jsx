@@ -60,6 +60,7 @@ function App() {
                 title="Cacos de Granito e Mármore"
                 width="200" height="100"></img>
         <ul><li>Vendo Cacos de Granito e Mármore</li>
+            <li>Cacos de Granito e Mármore-Construção e </li>
                <li>20m</li>
                <li>Praia Grande-SP  08 de set</li>
         </ul>
@@ -67,7 +68,8 @@ function App() {
       <div><img src=""
                 title=""
                 width="200" height="200"></img>
-        <ul><li>Pedrisco-Construção e Demolição</li>
+        <ul><li>Vendo Pedrisco-Construção e Demolição</li>
+            <li>Pedrisco-Construção e Demolição</li>
                <li>1000m</li>
                <li>Valinhos-SP 20 out</li>
         </ul>
