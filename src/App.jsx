@@ -83,13 +83,13 @@ function App() {
                <li>Estância Velha-RS 27 Ago</li>
             </ul>
       </div>
-      <div><img src=""
-                title=""
+      <div><img src="Nego_De_Fumo.jpg"
+                title="Nego De Fumo"
                 width="200" height="200"></img>
-        <ul><li>Vendo Microfibra Poliester</li>
-               <li>Microfibra Poliester-Plástico</li>
-               <li>5000Kg</li>
-               <li>Igreginha-RS 05 Jun</li>
+        <ul><li>Vendo Nego de Fumo </li>
+               <li>Nego De Fumo-Químicos</li>
+               <li>300.000Kg</li>
+               <li>Suzano-SP 29 Jun</li>
             </ul>
       </div>
       <div><img src="Flake_Azul_e_Verde_Plástico.jpg"
