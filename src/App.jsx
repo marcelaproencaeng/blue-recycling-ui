@@ -54,7 +54,7 @@ if(exibirCadastro){
 
         Excluir
         </button>
-        <button id="Cadastra-se" onClick={() => setexibirCadastro(true)}>
+        <button id="Cadastrar-se" onClick={() => setexibirCadastro(true)}>
             
         Cadastra-se
         </button>
@@ -83,78 +83,95 @@ if(exibirCadastro){
 
 const dados =[
   {
-    title:"Cacos de Granito e Mármore",
+    nome:"Cacos de Granito e Mármore",
     img:"https://i.imgur.com/mSCMpek.jpg",
-    description:"Vendo Cacos de Granito e Mármore",
-    name:"Cacos de Granito e Mármore",
-    distance:"20m",
-    place:"Praia Grande-SP",
-    date:"08 de set"
+    descricao:"Vendo Cacos de Granito e Mármore",
+    local:"Praia Grande-SP",
+    dataCriacao:"2023-09-08",
+    classificacao:"NÃO PERIGOSO",
+    nicho:"CONSTRUÇÃO CIVIL",
+    quantidade:"08 de set",
+    valor:"200.00"
 
 
   },
   {
-    title:"Agregado Leve de E.V.A",
+    nome:"Agregado Leve de E.V.A",
     img:"https://i.imgur.com/LHo30LN.jpg",
-    description:"Vendo Agregado Leve de E.V.A",
-    name:"Agregado de Construção de Demolição",
-    distance:"2000Kg",
-    place:"Estância Velha-RS",
-    date:"27 de Ago"
+    descricao:"Vendo Agregado Leve de E.V.A",
+    local:"Estância Velha-RS",
+    dataCriacao:"2023-08-27",
+    classificacao:"NÃO PERIGOSO",
+    nicho:"CONSTRUÇÃO CIVIL",
+    quantidade:"2000Kg",
+    valor:"350.00"
   },
   {
-    title:"Areia de Fundição",
+    nome:"Areia de Fundição",
     img:"https://i.imgur.com/xVZ7Yit.jpg",
-    description:"Vendo Areia de Fundição",
-    name:"Areia de Fundição-Construção e Demolição",
-    distance:"1260Kg",
-    place:"Santo Ângelo-RS",
-    date:"23 de Jan"  
+    descricao:"Vendo Areia de Fundição",
+    local:"Santo Ângelo-RS",
+    dataCriacao:"2023-01-23",
+    classificacao:"NÃO PERIGOSO",
+    nicho:"CONSTRUÇÃO CIVIL",
+    quantidade:"1260Kg",
+    valor:"190.00" 
   },
   {
-    title:"Borracha Silicone em Pó",
+    nome:"Borracha Silicone em Pó",
     img:"https://i.imgur.com/vsxZ5SP.jpg",
-    description:"Vendo Borracha Silicone em Pó",
-    name:"Borracha Silicone em Pó-Químicos",
-    distance:"60.000Kg",
-    place:"São caetano do Sul -SP",
-    date:"20 de Out"
+    descricao:"Vendo Borracha Silicone em Pó",
+    local:"São caetano do Sul -SP",
+    dataCriacao:"2023-10-20",
+    classificacao:"PERIGOSO",
+    nicho:"INDÚSTRIA QUÍMICA",
+    quantidade:"60.000Kg",
+    valor:"500.00"
+
   },
   {
-    title:"Nego De Fumo",
+    nome:"Nego De Fumo",
     img:"https://i.imgur.com/BkiBSN6.jpg",
-    description:"Vendo Nego de Fumo",
-    name:"Nego de Fumo-Químicos",
-    distance:"300.000Kg",
-    place:"Suzano -SP",
-    date:"29 de Jun"
+    descricao:"Vendo Nego de Fumo",
+    local:"Suzano -SP",
+    dataCriacao:"2023-06-29",
+    classificacao:"PERIGOSO",
+    nicho:"INDÚSTRIA QUÍMICA",
+    quantidade:"300.000Kg",
+    valor:"2500.00"
   },
   {
-    title:"Plástico Flake Azul e Verde",
+    nome:"Plástico Flake Azul e Verde",
     img:"https://i.imgur.com/sdFNlCf.jpg",
-    description:"Vendo Plástico Flake Azul e Verde",
-    name:"Flake Azul e Verde-Plástico",
-    distance:"60.000Kg",
-    place:"Maracanaú-CE",
-    date:"25 Jun"
+    descricao:"Vendo Plástico Flake Azul e Verde",
+    local:"Maracanaú-CE",
+    dataCriacao:"2023-06-25",
+    classificacao:"PERIGOSO",
+    nicho:"INDÚSTRIA QUÍMICA",
+    quantidade:"60.000Kg",
+    valor:"400.00"
   },
   {
-    title:"Fibra de Vidro Desfiada",
+    nome:"Fibra de Vidro Desfiada",
     img:"https://i.imgur.com/JnHBDnt.jpg",
-    description:"Vendo Fibra de Vidro Desfiada",
-    name:"Fibra de Vidro Desfiada- Construção e Demolição",
-    distance:"500.000Kg",
-    place:"Garibaldi-RS",
-    date:"20 Jan"
+    descricao:"Vendo Fibra de Vidro Desfiada",
+    local:"Garibaldi-RS",
+    dataCriacao:"2023-01-20",
+    classificacao:"PERIGOSO",
+    nicho:"CONSTRUÇÃO CIVIL",
+    quantidade:"500.000Kg",
+    valor:"3200.00"
   },
   {
-    title:"Pedrisco",
+    nome:"Pedrisco",
     img:"https://i.imgur.com/XTDadKe.jpg",
-    description:"Vendo Pedrisco",
-    name:"Pedrisco-Construção e Demolição",
-    distance:"1000m",
-    place:"Valinhos",
-    date:"20 out"
+    descricao:"Vendo Pedrisco",
+    local:"Valinhos-SP Pedrisco-Construção e Demolição",
+    dataCriacao:"2023-10-20",
+    classificacao:"NÃO PERIGOSO",
+    nicho:"CONSTRUÇÃO CIVIL",
+    quantidade:"1000m",
+    valor:"400.00"
   }
       
   
@@ -166,12 +183,14 @@ const dados =[
       {
         dados.map(dado =>(
           <div><img src={dado.img}
-                title={dado.title}
-                width="200" height="100"></img>
-        <ul><li>{dado.description}</li>
-            <li>{dado.name}</li>
-               <li>{dado.distance}</li>
-               <li>{dado.place} {dado.date}</li>
+                title={dado.nome}
+                width="200" height="200"></img>
+        <ul><li>{dado.descricao}</li>
+            <li>{dado.local} {dado.dataCriacao}</li>
+               <li>{dado.classificacao}</li>
+               <li>{dado.nicho} </li>
+               <li>{dado.quantidade}</li>
+               <li>{dado.valor}</li>
         </ul>
       </div>
 
