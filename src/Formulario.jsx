@@ -9,13 +9,32 @@ export const Formulario=({onClick})=>{
 
 
 return (
-    <div><h1>Cadastro</h1>
+    <div><h1>Cadastro de Resíduos</h1>
     <form action="">
-        <label htmlFor="razaoSocial">Razão Social</label>
-        <input type="text"id="razaoSocial" />
+        <label htmlFor="nome">Nome</label>
+        <input type="text"id="nome" />
         <br />
-        <label htmlFor="cnpj">Cnpj</label>
-        <input type="text"id="cnpj"/>
+        <label htmlFor="descricao">Descrição</label>
+        <input type="text"id="descricao"/>
+        <br/>
+        <label htmlFor="local">Local</label>
+        <input type="text"id="local"/>
+        <br/>
+        <label htmlFor="dataCriacao">Data criação</label>
+        <input type="date"id="dataCriacao"/>
+        <br/>
+        <label htmlFor="classificacao">Classificacao</label>
+        <input type="enum"id="classificacao"/>
+        <br/>
+        <label htmlFor="nicho">Nicho</label>
+        <input type="enum"id="nicho"/>
+        <br/>
+        <label htmlFor="quantidade">Quantidade</label>
+        <input type="double"id="quantidade"/>
+        <br/>
+        <label htmlFor="valor">Valor</label>
+        <input type="bigdecimal"id="valor"/>
+
         <p>Você é vendedor?</p>
         <input type="radio"id="sim" name="vendedor"/>
         <label htmlFor="sim">sim</label>
@@ -40,7 +59,7 @@ return (
     </div>
 )
 }
-function App() {
+function Residuo() {
     const [autenticado, setAutenticado] = useState(false);
     const [razaoSocial,setRazaoSocial] = useState(null);
     const [cnpj,setCnpj] = useState(null);

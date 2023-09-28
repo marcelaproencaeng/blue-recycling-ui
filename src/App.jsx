@@ -13,6 +13,7 @@ function App() {
   const [mensagemErro,setMensagemErro] = useState(null);
   const [exibirCadastro,setexibirCadastro]=useState(false);
   const [exibirCompra,setexibirCompra]=useState(false);
+  const [exibirVenda,setexibirVenda]=useState(false);
 
 
 
@@ -180,7 +181,10 @@ const dados =[
   {
    logos.map(logo =>(
      <div><img src={logo.img}
-     width="300" height="300"></img>
+     width="500" height="500"></img>   <button id="Vender" onClick={() => setexibirVenda(true)}>
+            
+     Vender
+     </button>
      </div>
 ))
 }</div>
