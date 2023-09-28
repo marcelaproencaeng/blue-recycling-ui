@@ -39,6 +39,8 @@ if(exibirCadastro){
           {
             mensagemErro && <p>Usuario ou senha inválidos.Tente novamente! </p>
           }
+          <div><h1>Login</h1>
+          
           <form onSubmit={handleOnSubmit}>
             <div className="usuario">
               <label htmlFor="">Usuario</label>
@@ -60,6 +62,7 @@ if(exibirCadastro){
         </button>
           </div>
           </form>
+        </div>
         </div>
       </>
     )
@@ -90,7 +93,7 @@ const dados =[
     dataCriacao:"2023-09-08",
     classificacao:"NÃO PERIGOSO",
     nicho:"CONSTRUÇÃO CIVIL",
-    quantidade:"08 de set",
+    quantidade:"1000Kg",
     valor:"200.00"
 
 
@@ -166,7 +169,7 @@ const dados =[
     nome:"Pedrisco",
     img:"https://i.imgur.com/XTDadKe.jpg",
     descricao:"Vendo Pedrisco",
-    local:"Valinhos-SP Pedrisco-Construção e Demolição",
+    local:"Valinhos-SP",
     dataCriacao:"2023-10-20",
     classificacao:"NÃO PERIGOSO",
     nicho:"CONSTRUÇÃO CIVIL",
@@ -178,12 +181,22 @@ const dados =[
 ]
   return (
     
-   
+    
     <div>
+    <div><h1>Home</h1></div>
+    <div>
+  {
+   logos.map(logo =>(
+     <div><img src={logo.img}
+     width="300" height="300"></img>
+     </div>
+))
+}</div>
+  
       {
         dados.map(dado =>(
           <div><img src={dado.img}
-                title={dado.nome}
+                nome={dado.nome}
                 width="200" height="200"></img>
         <ul><li>{dado.descricao}</li>
             <li>{dado.local} {dado.dataCriacao}</li>
@@ -193,6 +206,9 @@ const dados =[
                <li>{dado.valor}</li>
         </ul>
       </div>
+      
+      
+      
 
         ))
       }
