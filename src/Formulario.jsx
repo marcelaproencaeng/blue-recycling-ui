@@ -12,6 +12,7 @@ return (
     <form action="">
         <label htmlFor="razaoSocial">Razão Social</label>
         <input type="text"id="razaoSocial" />
+        <br />
         <label htmlFor="cnpj">Cnpj</label>
         <input type="text"id="cnpj"/>
         <p>Você é vendedor?</p>
@@ -30,6 +31,10 @@ return (
      <button id="Voltar" onClick={onClick}>
             
             Voltar
+            </button>
+    <button id="Cadastrar" onClick={onClick}>
+
+            Cadastrar
             </button>
     </div>
 )
