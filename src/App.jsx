@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios';
-import Granito_Marmore from "./assets/Imagens/Cacos_De_Granito_e_Marmore.jpg"
+//import Granito_Marmore from "./assets/Imagens/Cacos_De_Granito_e_Marmore.jpg"
 import { Formulario } from './Formulario';
 
 function App() {
@@ -57,6 +57,7 @@ if(exibirCadastro){
            <button id="Excluir" onClick={() => setTarefas(tarefas)}>
 
         Excluir
+
         </button>
         <button id="Cadastrar-se" onClick={() => setexibirCadastro(true)}>
             
@@ -222,6 +223,17 @@ const dados =[
         } }> Sair </button> 
     </div>
   )
+
+  
+
+  //capturar os valores dos inputs usuario e senha 
+  //enviar os dados
+  //endpoint no java para a rota
+if(exibirCadastro){
+  return  <Formulario onClick={()=>{
+    setexibirCadastro(false)
+  }}></Formulario>
+}
   
 }
 

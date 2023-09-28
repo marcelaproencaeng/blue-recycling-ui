@@ -1,3 +1,8 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import axios from 'axios';
 export const Formulario=({onClick})=>{
    // private String razaoSocial;
     //private String cnpj;
@@ -35,16 +40,7 @@ return (
         <label htmlFor="valor">Valor</label>
         <input type="bigdecimal"id="valor"/>
 
-        <p>Você é vendedor?</p>
-        <input type="radio"id="sim" name="vendedor"/>
-        <label htmlFor="sim">sim</label>
-        <input type="radio" id="nao" name="vendedor"/>
-        <label htmlFor="nao">não</label>
-        <p>Você tem transporte?</p>
-        <input type="radio" id="sim" name="transporte"/>
-        <label htmlFor="sim">sim</label>
-        <input type="radio" id="nao" name="transporte"/>
-        <label htmlFor="nao">não</label>
+    
 
 
     </form>
@@ -61,14 +57,20 @@ return (
 }
 function Residuo() {
     const [autenticado, setAutenticado] = useState(false);
-    const [razaoSocial,setRazaoSocial] = useState(null);
-    const [cnpj,setCnpj] = useState(null);
+    const [nome,setNome] = useState(null);
+    const [descricao,setDescricao] = useState(null);
+    const [local,setLocal] = useState(null);
+    const [dataCriacao,setDataCriacao] = useState(null);
+    const [classificacao,setClassificacao] = useState(null);
+    const [nicho,setNicho] = useState(null);
+    const [quantidade,setQuantidade] = useState(null);
+    const [valor,setValor] = useState(null);
     const [mensagemErro,setMensagemErro] = useState(null);
     const [exibirCadastro,setexibirCadastro]=useState(false);
   const handleOnSubmit = (event) => {
     event.preventDefault();
     axios
-      .post('http://localhost:8080/api/v1/usuarios', {razaoSocial , cnpj })
+      .post('http://localhost:8080/api/v1/residuos', {nome,descricao,local,dataCriacao,classificacao,nicho,quantidade,valor})
       .then(() => setAutenticado(true))
       .catch(() => setMensagemErro(true))
   }
