@@ -12,6 +12,7 @@ function App() {
   const [senha,setSenha] = useState(null);
   const [mensagemErro,setMensagemErro] = useState(null);
   const [exibirCadastro,setexibirCadastro]=useState(false);
+  const [exibirCompra,setexibirCompra]=useState(false);
 
 
 
@@ -73,15 +74,6 @@ if(exibirCadastro){
 
     }
 ]
-//return(
- // <div>
- // {
-  //  logos.map(logo =>(
-   //   <div><img src={logo.img}
-  //    width="200" height="200"></img>
-  //    </div>
-//))
- // }
 
 
 const dados =[
@@ -204,7 +196,12 @@ const dados =[
                <li>{dado.nicho} </li>
                <li>{dado.quantidade}</li>
                <li>{dado.valor}</li>
+               <button id="Comprar" onClick={() => setexibirCompra(true)}>
+            
+            Comprar
+            </button>
         </ul>
+       
       </div>
       
       
