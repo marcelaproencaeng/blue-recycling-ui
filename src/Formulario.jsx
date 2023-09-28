@@ -7,6 +7,7 @@ export const Formulario=({onClick})=>{
    // private String email;
 
 
+
 return (
     <div><h1>Cadastro</h1>
     <form action="">
@@ -38,4 +39,18 @@ return (
             </button>
     </div>
 )
+}
+function App() {
+    const [autenticado, setAutenticado] = useState(false);
+    const [razaoSocial,setRazaoSocial] = useState(null);
+    const [cnpj,setCnpj] = useState(null);
+    const [mensagemErro,setMensagemErro] = useState(null);
+    const [exibirCadastro,setexibirCadastro]=useState(false);
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    axios
+      .post('http://localhost:8080/api/v1/usuarios', {razaoSocial , cnpj })
+      .then(() => setAutenticado(true))
+      .catch(() => setMensagemErro(true))
+  }
 }
